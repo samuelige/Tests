@@ -1,0 +1,51 @@
+.first-contents-mainContainer {
+  background: hsl(231, 26%, 20%);
+}
+
+.first-contents-mainContainer {
+  width: inherit;
+  height: inherit;
+  font-family: "Poppins";
+  padding: 10% 5% 10% 5%;
+}
+
+.first-contents-mainContainer {
+  color: #ffffff;
+}
+
+.welcome,
+.showUsers {
+  /* color: #ffffff29; */
+}
+
+.hello {
+  margin-bottom: 1px;
+  display: flex;
+}
+
+.hello-text {
+  font-size: 30px;
+  opacity: 0.8;
+}
+
+.welcome {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.emerald {
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 6.3px 0px 0px 8px;
+}
+
+.subContainer {
+  margin: 2% 0px 3.5% 0px;
+}
+
+.showUsers {
+  font-size: 13px;
+  font-weight: bold;
+  opacity: 0.9;
+  margin-bottom: 2.5%;
+}

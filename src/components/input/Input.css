@@ -1,0 +1,28 @@
+.input {
+  display: flex;
+  background: #3c3f54;
+  border-radius: 25px;
+  align-content: center;
+  width: 100%;
+  padding: 1.5% 0px 1.5% 1.5%;
+}
+
+.input-field {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.input,
+.input-field {
+  border: none;
+}
+
+.search {
+}
+
+.input-field {
+  outline: none;
+  background: transparent;
+  width: inherit;
+  margin-left: 2%;
+}
