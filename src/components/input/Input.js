@@ -3,10 +3,10 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import './Input.css'
 
-const Input = ({children}) => {
+const Input = ({ search, classname, children}) => {
     return (
-        <div className="input"> 
-            <SearchIcon className='search'/>
+        <div className={classname}> 
+            <SearchIcon className={search}/>
             <input type="text" className='input-field' placeholder={children}/>
         </div>
     )
