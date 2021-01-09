@@ -1,0 +1,57 @@
+.users-card-container {
+  width: 100%;
+  box-shadow: 10px 10px 40px #0000000d;
+  border-radius: 18px;
+  background: #fcfcff;
+  margin-top: 5%;
+  padding: 3% 1% 3% 4%;
+  height: 140px;
+}
+
+.user-details {
+  width: inherit;
+}
+
+.picture-avatar {
+  border: solid 3px #30bbb5;
+  width: 10%;
+}
+
+.profile-picture {
+  margin: 2% 3% 0px 0px;
+}
+
+.users-card-container,
+.contacts,
+.e-address,
+.cell {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.title,
+.address {
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.address {
+  font-weight: 300;
+}
+
+.contacts {
+  color: #babdd1;
+  width: inherit;
+}
+
+.contact-icon-email {
+  margin-top: 1.6%;
+}
+
+.contact-icons-cell {
+  margin-top: 4%;
+}

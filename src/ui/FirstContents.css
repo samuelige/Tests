@@ -1,12 +1,11 @@
 .first-contents-mainContainer {
-  background: hsl(231, 26%, 20%);
+  /* background: hsl(231, 26%, 20%); */
 }
 
 .first-contents-mainContainer {
   width: inherit;
   height: inherit;
-  font-family: "Poppins";
-  padding: 10% 5% 10% 5%;
+  padding: 22% 10% 10% 15%;
 }
 
 .first-contents-mainContainer {
@@ -19,33 +18,62 @@
 }
 
 .hello {
-  margin-bottom: 1px;
+  margin-bottom: 1%;
   display: flex;
 }
 
 .hello-text {
-  font-size: 30px;
-  opacity: 0.8;
+  font-size: 33px;
+  opacity: 0.9;
 }
 
 .welcome {
-  font-size: 12px;
-  opacity: 0.6;
+  font-size: 13px;
+  opacity: 0.8;
 }
 
 .emerald {
   font-weight: bolder;
-  font-size: 20px;
-  margin: 6.3px 0px 0px 8px;
+  font-size: 25px;
+  margin: 5.9px 0px 0px 8px;
 }
 
 .subContainer {
-  margin: 2% 0px 3.5% 0px;
+  width: 80%;
+  margin: 7% 0px 12% 0px;
 }
+
+.input {
+  display: flex;
+  background: #3c3f54;
+  border-radius: 25px;
+  align-content: center;
+  width: 100%;
+  height: 80px;
+  padding: 2% 0px 1.5% 1.5%;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* .input-field {
+  outline: none;
+  background: inherit;
+  width: inherit;
+  margin-left: 2%;
+} */
 
 .showUsers {
   font-size: 13px;
   font-weight: bold;
   opacity: 0.9;
-  margin-bottom: 2.5%;
+  margin-bottom: 7%;
+}
+
+.first-contents-users-container {
+  padding: 0px 30% 0px 0px;
+}
+
+.search {
+  margin-top: 4.5%;
+  margin-left: 2%;
 }
