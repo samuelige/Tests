@@ -17,14 +17,14 @@ const AllUsersCard = () => {
                 <div className="contacts">
                     <div className="e-address">
                         <BiEnvelope className='contact-icon-email' />
-                        <h5 className="email">Lorem ipsum dolor sit amet consectetur.</h5>
+                        <h5 className="email">Lorem ipsum dolor sit .</h5>
                     </div>
                     <div className="cell">
                         <BiPhoneCall className='contact-icons-cell'/>
                         <h5 className="cell-number">233---33</h5>
                     </div>
                     <button className="arrow-icon">
-                        <FaArrowRight />
+                        <FaArrowRight className='arrow'/>
                     </button>
                 </div>
                 
