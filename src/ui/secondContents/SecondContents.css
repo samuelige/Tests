@@ -17,14 +17,20 @@
   margin-bottom: 2%;
 }
 
-.filter-contents {
+.fs-filter-contents {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
+  height: 45px;
 }
 .find-list {
-  width: 50%;
-  margin-right: 2%;
+  width: 250px;
+  /* margin-right: 2%; */
+}
+
+.find-input {
+  width: 100%;
+  align-items: center;
 }
 
 .country-container {
@@ -33,7 +39,9 @@
   border: none;
   background: #e2e2ea;
   border-radius: 20px;
-  padding: 2% 1% 2% 1%;
+  padding: 2% 3% 2% 3%;
+  align-items: center;
+  margin-left: 30px;
 }
 .country-container,
 .toggle-on {
@@ -56,17 +64,19 @@
 }
 
 .show-country {
-  margin-left: 4px;
+  /* margin-left: 6px; */
 }
 .country,
 .show-country {
   font-weight: bold;
   opacity: 0.7;
+  margin-top: 6%;
+  width: 100%;
 }
 
 .toggle-on {
-  width: 30%;
-  /* padding: 3px 0px 3px 0px; */
+  width: 40%;
+  padding: 5px 0px 0px 0px;
 }
 
 .on {
@@ -74,10 +84,6 @@
   font-size: 28px;
   margin-top: 2%;
   margin-right: -20%;
-}
-
-.show-country {
-  margin-top: 6%;
 }
 
 .first-section {
@@ -98,4 +104,70 @@
 
 .search-tog {
   margin-left: 2%;
+}
+
+.secondContents-container > .second-section {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  /* margin-top: 3%; */
+  padding: 3% 0px 0px 11%;
+  background: transparent;
+}
+
+.second-section > .down-load {
+  width: 180px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  background: #7946c1;
+  color: #ffffff;
+  padding: 1% 2px 1% 2%;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.down-load,
+.direction {
+  /* flex: 1; */
+}
+
+.down-load > h4 {
+  font-size: 12px;
+  margin-left: 2%;
+  width: 100%;
+}
+
+.downLoad-icon {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 100%;
+  height: 35px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  margin-right: 10%;
+  margin-top: -2%;
+
+  padding-top: 3%;
+}
+
+.direction {
+  display: flex;
+  width: 13%;
+  margin-left: 52%;
+}
+
+.left-arrow {
+  background: #e2e2ea;
+  color: #262a41;
+}
+.right-arrow {
+  background: #262a41;
+  color: #ffffff;
 }

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.users-list-container {
+  width: inherit;
+}
+
+.result-and-return-button {
+  display: flex;
+  width: 100%;
+  margin-bottom: 7%;
+}
+
+.return-arrow-icon {
+  color: #30bbb5;
+  font-size: 20px;
+}
+
+.result-and-return-button > h3 {
+  width: inherit;
+  margin-left: 3%;
+  font-family: "Poppins";
+  opacity: 0.8;
+  /* font-size: ; */
+}
+
+.profile-container,
+.email-card,
+.phone,
+.phone-second {
+  display: flex;
+}
+
+.profile-container,
+.picture-toggle,
+.sub-profile-container,
+.full-name,
+.full-address,
+.email-card,
+.year-joined,
+.phone,
+.phone-icon,
+.phone-number {
+  width: inherit;
+}
+
+.picture-toggle > .MuiAvatar-root {
+  width: 155px;
+  height: 155px;
+  border: solid 5px #30bbb5;
+}
+
+.picture-toggle {
+  margin-right: 5%;
+}
+
+.picture-toggle {
+  width: inherit;
+}
+
+.sub-profile-container {
+  margin-top: 3%;
+}
+
+.full-name {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.full-name,
+.full-address,
+.email-card,
+.year-joined,
+.phone {
+  margin-bottom: 3%;
+}
+
+.full-address {
+  font-weight: lighter;
+}
+
+.email-card,
+.year-joined {
+  border: none;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.email-card {
+  background: #e2e2ea;
+  width: 85%;
+  padding: 1% 1.5% 1.5% 3%;
+}
+
+.year-joined {
+  background: #f935a9;
+  opacity: 0.2;
+  height: 30px;
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+}
+
+.years {
+  opacity: 0.8;
+  position: absolute;
+  margin: 0.2% 0px 0px 1%;
+  z-index: 2;
+}
+
+.years,
+.email-card > h4,
+.phone-number {
+  font-size: 13px;
+}
+
+.email-card > .contact-icon-email {
+  opacity: 0.3;
+}
+.email-card > h4,
+.year-joined > h4 {
+  opacity: 0.6;
+}
+
+.phone-number {
+  opacity: 0.6;
+}
+
+.phone > .contact-icons-cell,
+.phone-second > .contact-icons-cell {
+  color: #babdd1;
+}
+
+.phone {
+  margin-top: 15%;
+}
