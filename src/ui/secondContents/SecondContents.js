@@ -7,7 +7,7 @@ import { ImCloudDownload } from "react-icons/im";
 
 import Input from '../../components/input/Input'
 import './SecondContents.css'
-import AllUsersCard from '../../components/All-UsersCard/AllUsersCard'
+import AllUsers from '../../components/All-UsersCard/AllUsersCard'
 import UsersList from '../../components/Users-list/UsersList';
 
 
@@ -35,7 +35,7 @@ const SecondContents = () => {
                     </div>
                    
                 </div>
-                <AllUsersCard/>
+                <AllUsers/>
                 <UsersList />
             </div>
             <div className="second-section">
