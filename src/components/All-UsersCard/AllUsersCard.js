@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {useHistory} from "react-router-dom";
 import { useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 import { Avatar } from '@material-ui/core'
@@ -27,7 +28,7 @@ const AllUsersCard = ({otherprops}) => {
                         <h5 className="cell-number">{otherprops.cell}</h5>
                     </div>
                     <button className="arrow-icon">
-                        <FaArrowRight className='arrow'/>
+                        <FaArrowRight className='arrow' onClick={otherprops.click}/>
                     </button>
                 </div>
                 
@@ -37,50 +38,69 @@ const AllUsersCard = ({otherprops}) => {
 }
 
 
-const AllUsers = () => {
-   
-    const state =  useSelector(state => state.randomData.randomData);
-    console.log(state);
-    const state_2 =  useSelector(state => state.secondRandomData.secondRandomData);
-    const state_3 =  useSelector(state => state.thirdRandomData.thirdRandomData)
+const AllUsers = ({firstUser, secondUser, thirdUser, setOpenProfile}) => {
     
-    const picture = state.picture.thumbnail;
-    const email = state.email;
-    const cell = state.cell;
-    const firstname = state.name.first;
-    const lastname = state.name.last;
+    const userData_1 =  firstUser();
+    
+    const userData_2 =  secondUser();
+    const userData_3 =  thirdUser()
+    console.log(userData_3.results[0]);
+    
+    const picture = userData_1.results[0].picture.thumbnail;
+    const email = userData_1.results[0].email;
+    const cell = userData_1.results[0].cell;
+    const firstname = userData_1.results[0].name.first;
+    const lastname = userData_1.results[0].name.last;
     const name = `${firstname} ${lastname}`
-    const postcode = state.location.postcode;
-    const city = state.location.city;
-    const statee = state.location.state;
-    const country = state.location.country;
+    const postcode = userData_1.results[0].location.postcode;
+    const city = userData_1.results[0].location.city;
+    const statee = userData_1.results[0].location.state;
+    const country = userData_1.results[0].location.country;
     const address = `${postcode} ${city} ${statee} ${country}`
 
-    const picture_2 =  state_2.picture.thumbnail;
-    const email_2 =  state_2.email;
-    const cell_2 =  state_2.cell;
-    const firstname_2 =  state_2.name.first;
-    const lastname_2 =  state_2.name.last;
+    const picture_2 =  userData_2.results[0].picture.thumbnail;
+    const email_2 =  userData_2.results[0].email;
+    const cell_2 =  userData_2.results[0].cell;
+    const firstname_2 =  userData_2.results[0].name.first;
+    const lastname_2 =  userData_2.results[0].name.last;
     const name_2 = `${firstname_2} ${lastname_2}`
-    const postcode_2 =  state_2.location.postcode;
-    const city_2 =  state_2.location.city;
-    const statee_2 =  state_2.location.state;
-    const country_2 =  state_2.location.country;
+    const postcode_2 =  userData_2.results[0].location.postcode;
+    const city_2 =  userData_2.results[0].location.city;
+    const statee_2 =  userData_2.results[0].location.state;
+    const country_2 =  userData_2.results[0].location.country;
     const address_2 = `${postcode_2} ${city_2} ${statee_2} ${country_2}`
 
-    const picture_3 = state_3.picture.thumbnail;
-    const email_3 = state_3.email;
-    const cell_3 = state_3.cell;
-    const firstname_3 = state_3.name.first;
-    const lastname_3 = state_3.name.last;
+    console.log(userData_2.results[0]);
+
+    const picture_3 = userData_3.results[0].picture.thumbnail;
+    const email_3 = userData_3.results[0].email;
+    const cell_3 = userData_3.results[0].cell;
+    const firstname_3 = userData_3.results[0].name.first;
+    const lastname_3 = userData_3.results[0].name.last;
     const name_3 = `${firstname_3} ${lastname_3}`
-    const postcode_3 = state_3.location.postcode;
-    const city_3 = state_3.location.city;
-    const statee_3 = state_3.location.state;
-    const country_3 = state_3.location.country;
+    const postcode_3 = userData_3.results[0].location.postcode;
+    const city_3 = userData_3.results[0].location.city;
+    const statee_3 = userData_3.results[0].location.state;
+    const country_3 = userData_3.results[0].location.country;
     const address_3 = `${postcode_3} ${city_3} ${statee_3} ${country_3}`
 
-    
+    console.log(userData_3.results[0]);
+
+    // router
+    const history = useHistory();
+    const firstProfileData = () =>{
+        setOpenProfile(true)
+        history.push('/firstProfileData')
+    } ;
+    const secondProfilePageData = () => {
+        setOpenProfile(true)
+        history.push('/secondProfilePageData')
+    };
+    const thirdProfilePageData = () => {
+        setOpenProfile(true)
+        history.push('/thirdProfilePageData')
+    };
+
     const [AllUserState, setAllUserState] = useState(
         [
             {
@@ -89,7 +109,8 @@ const AllUsers = () => {
                 name: name,
                 address: address,
                 email: email,
-                cell : cell
+                cell : cell,
+                click: firstProfileData
             },
     
             {
@@ -98,7 +119,8 @@ const AllUsers = () => {
                 name: name_2,
                 address: address_2,
                 email: email_2,
-                cell : cell_2
+                cell : cell_2,
+                click: secondProfilePageData,
             },
     
             {
@@ -107,7 +129,8 @@ const AllUsers = () => {
                 name: name_3,
                 address: address_3,
                 email: email_3,
-                cell : cell_3
+                cell : cell_3,
+                click: thirdProfilePageData,
             }
         ]
     )

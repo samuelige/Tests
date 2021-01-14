@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense, useState } from 'react';
 import { FaToggleOn } from "react-icons/fa";
 import { FaSortDown } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
@@ -10,8 +10,31 @@ import './SecondContents.css'
 import AllUsers from '../../components/All-UsersCard/AllUsersCard'
 import UsersList from '../../components/Users-list/UsersList';
 
+import { Route, Switch } from 'react-router-dom';
+import FirstProfileData from '../../Navigation/pages/FirstProfileData';
+
+import { useAsyncResource } from 'use-async-resource';
+import useErrorBoundary from "use-error-boundary"
+
+import SecondProfilePageData from '../../Navigation/pages/SecondProfilePageData';
+import ThirdProfilePageData from '../../Navigation/pages/ThirdProfilePageData';
+
+
+const API_URL = 'https://randomuser.me/api/';
+const randData = () => fetch(API_URL).then(res => res.json());
+const secondRandData = () => fetch(API_URL).then(res => res.json());
+const thirdRandData = () => fetch(API_URL).then(res => res.json());
+
+
 
 const SecondContents = () => {
+    const [firstUser, setFirstUser] = useAsyncResource(randData, []);
+    const [secondUser, setsecondUser] = useAsyncResource(secondRandData, []);
+    const [thirdUser, setthirdUser] = useAsyncResource(thirdRandData, []);
+    const {ErrorBoundary} = useErrorBoundary();
+
+    const [openProfile, setOpenProfile] = useState(false);
+
     return (
         <div className='secondContents-container'>
             <div className="first-section">
@@ -35,8 +58,32 @@ const SecondContents = () => {
                     </div>
                    
                 </div>
-                <AllUsers/>
-                <UsersList />
+
+               {
+                    !openProfile ?  
+                    <ErrorBoundary>
+                        <Suspense fallback='All Users is Loading'>
+                            <AllUsers firstUser = {firstUser} secondUser = {secondUser} thirdUser = {thirdUser} setOpenProfile= {setOpenProfile}/>
+                        </Suspense>
+                    </ErrorBoundary>
+
+                    :
+
+                    <Switch>
+                        <ErrorBoundary>
+                            <Suspense fallback='UserList'>
+                                <Route path='/firstProfileData' component={() => <FirstProfileData firstUser = {firstUser} setOpenProfile= {setOpenProfile}/>} />
+                                <Route path='/secondProfilePageData'  component={() => <SecondProfilePageData secondUser = {secondUser} setOpenProfile= {setOpenProfile}/> } /> 
+                                <Route path='/thirdProfilePageData'  component={() => <ThirdProfilePageData thirdUser = {thirdUser} setOpenProfile= {setOpenProfile}/> } /> 
+                            </Suspense>
+                        </ErrorBoundary>
+                    </Switch>
+               }
+
+               
+
+                
+                {/* <UsersList /> */}
             </div>
             <div className="second-section">
                 <div className="down-load">

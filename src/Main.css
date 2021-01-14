@@ -1,0 +1,29 @@
+.App,
+.App-first-subContainer,
+.App-second-subContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  background: hsl(231, 26%, 20%);
+  font-family: "Poppins";
+  padding: 1% 1% 1% 0px;
+  width: 100%;
+  height: 120vh;
+}
+
+.App-first-subContainer {
+  background: inherit;
+  flex: 1;
+}
+
+.App-second-subContainer {
+  flex: 1.1;
+  border: solid 1px #9b9b9b;
+  background: #f7f7ff;
+  border-radius: 16px;
+  width: inherit;
+  overflow: hidden;
+}
