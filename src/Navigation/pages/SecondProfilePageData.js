@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 // import UsersList from '../../components/Users-list/UsersList';
 
-const ThirdProfilePageData = () => {
+const SecondProfilePageData = () => {
     
 
     const firstProfileState = useSelector(firstState => firstState.randomData.randomData);
@@ -57,4 +57,4 @@ const ThirdProfilePageData = () => {
     )
 }
 
-export default ThirdProfilePageData
+export default SecondProfilePageData

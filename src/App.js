@@ -1,20 +1,17 @@
-import './App.css';
-import FirstContents from './ui/FirstContents';
-import SecondContents from './ui/secondContents/SecondContents';
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import Main from './Main'
 
 
-
-function App() {
-  return (
-    <div className="App">
-      <div className="App-first-subContainer">
-        <FirstContents />
-      </div>
-      <div className="App-second-subContainer">
-        <SecondContents />
-      </div>
-    </div>
-  );
+const App = () => {
+    return (
+        <div className="app">
+            {/* <Switch>
+                <Route exact path='/home' component={Main}/>
+            </Switch> */}
+            <Main/>
+        </div>
+    )
 }
 
-export default App;
+export default App
